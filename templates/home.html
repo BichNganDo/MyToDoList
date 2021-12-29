@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To Do List</title>
-    <link rel="stylesheet" href="../public/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="${static_domain}/css/bootstrap.min.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <style>
@@ -83,10 +83,12 @@ ul li.checked::before {
                 <div class="card" style="max-width: 45rem; margin-top: 70px;">
                     <div class="card-header bg-success">
                         <h2 class="text-center" style="color: white;">My To Do List</h2>
-                        <div class="input-group mt-3 mb-2">
+                        <form action="">
+                          <div class="input-group mt-3 mb-2">
                             <input type="text" class="form-control" placeholder="Things To Do..." aria-describedby="button-addon2"> 
                             <button class="btn btn-secondary" type="button" id="button-addon2">Add</button>
                           </div>
+                        </form>
                     </div>
                     <div>
                         <ul id="myUL">
@@ -103,9 +105,9 @@ ul li.checked::before {
             <div class="col-md-2"></div>
         </div>
     </div>
-    <script src="../public/js/popper.min.js"></script>
-    <script src="../public/js/bootstrap.bundle.js"></script>
-    <script src="../public/js/jquery-3.6.0.js"></script>
+    <script src="${static_domain}/js/popper.min.js"></script>
+    <script src="${static_domain}/js/bootstrap.bundle.js"></script>
+    <script src="${static_domain}/js/jquery-3.6.0.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 </body>
 </html>

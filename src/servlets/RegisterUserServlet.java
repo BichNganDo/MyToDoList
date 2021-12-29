@@ -56,7 +56,6 @@ public class RegisterUserServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Gson gson = new Gson();
         APIResult result = new APIResult(0, "Success");
-        String action = request.getParameter("action");
 
         try {
             boolean isMultipart = ServletFileUpload.isMultipartContent(request);

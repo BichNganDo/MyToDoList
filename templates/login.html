@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>To Do List</title>
-        <link rel="stylesheet" href="../public/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="${static_domain}/css/bootstrap.min.css" />
     </head>
 <body>
     <div class="container">
@@ -15,17 +15,23 @@
                 <div class="card text-white mb-3" style="max-width: 35rem;">
                     <div class="card-header bg-success text-center"><h2>Đăng nhập</h2></div>
                     <div class="card-body" style="border: 1px solid #198754;">
-                        <form action="/users/login" method="POST">
+                        <form action="/login" method="POST">
                             <div class="mb-3">
-                                <label for="exampleFormControlInput1" for="email" class="form-label" style="color: black;">Email:</label>
+                                <label for="email" class="form-label" style="color: black;">Email:</label>
                                 <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
                             </div>
                             <div class="mb-3">
-                                <label for="exampleFormControlInput1" for="password" class="form-label" style="color: black;">Password:</label>
+                                <label for="password" class="form-label" style="color: black;">Password:</label>
                                 <input type="password" name="password" class="form-control" id="exampleFormControlInput1" placeholder="Password">
                             </div>
                             <div class="mb-3">
+                                <p style="color: red;">${error_message}</p>
+                            </div>
+                            <div class="mb-3">
                                 <button type="submit" class="btn btn-success" style="margin: 0px 200px;">Đăng nhập</button>
+                            </div>
+                            <div class="mb-3 text-center">
+                                <p style="color: black;">Bạn chưa có tài khoản? <a style="text-decoration: none;" href="/register">Đăng ký</a></p>
                             </div>
                         </form> 
                     </div>
@@ -34,9 +40,9 @@
             <div class="col-md-3"></div>
         </div>
     </div>
-    <script src="../public/js/popper.min.js"></script>
-    <script src="../public/js/bootstrap.bundle.js"></script>
-    <script src="../public/js/jquery-3.6.0.js"></script>
+    <script src="${static_domain}/js/popper.min.js"></script>
+    <script src="${static_domain}/js/bootstrap.bundle.js"></script>
+    <script src="${static_domain}/js/jquery-3.6.0.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 </body>
 </html>

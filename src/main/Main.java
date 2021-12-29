@@ -8,6 +8,8 @@ import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.servlet.FilterHolder;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
+import servlets.HomeServlet;
+import servlets.LoginServlet;
 import servlets.RegisterUserServlet;
 
 public class Main {
@@ -16,6 +18,8 @@ public class Main {
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
 
         context.addServlet(new ServletHolder(new RegisterUserServlet()), "/register");
+        context.addServlet(new ServletHolder(new LoginServlet()), "/login");
+        context.addServlet(new ServletHolder(new HomeServlet()), "/");
 
 //        FilterHolder authenFilter = new FilterHolder(new AuthenFilter());
 //        authenFilter.setName("AuthenFilter");
