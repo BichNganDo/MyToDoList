@@ -18,11 +18,11 @@
                         <form action="/login" method="POST">
                             <div class="mb-3">
                                 <label for="email" class="form-label" style="color: black;">Email:</label>
-                                <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
+                                <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="Email" required>
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label" style="color: black;">Password:</label>
-                                <input type="password" name="password" class="form-control" id="exampleFormControlInput1" placeholder="Password">
+                                <input type="password" name="password" class="form-control" id="exampleFormControlInput1" placeholder="Password" required>
                             </div>
                             <div class="mb-3">
                                 <p style="color: red;">${error_message}</p>

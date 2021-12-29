@@ -117,4 +117,5 @@ public class RegisterUserServlet extends HttpServlet {
         ServletUtil.printJson(request, response, gson.toJson(result));
     }
 
+
 }

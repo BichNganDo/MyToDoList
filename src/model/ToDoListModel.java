@@ -89,9 +89,8 @@ public class ToDoListModel {
         return result;
     }
 
-    public int addToDoList(HttpServletRequest request, String toDoList) {
+    public int addToDoList(int idUser, String toDoList) {
         Connection conn = null;
-        int idUser = JWTModel.INSTANCE.getIdUser(request);
         try {
             conn = dbClient.getDbConnection();
             if (null == conn) {

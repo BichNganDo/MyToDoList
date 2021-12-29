@@ -1,5 +1,6 @@
 package main;
 
+import filter.AuthenFilter;
 import org.eclipse.jetty.server.Handler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.ContextHandler;
@@ -10,6 +11,7 @@ import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHolder;
 import servlets.HomeServlet;
 import servlets.LoginServlet;
+import servlets.LogoutServlet;
 import servlets.RegisterUserServlet;
 
 public class Main {
@@ -17,13 +19,15 @@ public class Main {
     public static void main(String[] args) throws Exception {
         ServletContextHandler context = new ServletContextHandler(ServletContextHandler.SESSIONS);
 
+        context.addServlet(new ServletHolder(new HomeServlet()), "/");
         context.addServlet(new ServletHolder(new RegisterUserServlet()), "/register");
         context.addServlet(new ServletHolder(new LoginServlet()), "/login");
-        context.addServlet(new ServletHolder(new HomeServlet()), "/");
+        context.addServlet(new ServletHolder(new LogoutServlet()), "/logout");
 
-//        FilterHolder authenFilter = new FilterHolder(new AuthenFilter());
-//        authenFilter.setName("AuthenFilter");
-//        context.addFilter(authenFilter, "/*", null);
+
+        FilterHolder authenFilter = new FilterHolder(new AuthenFilter());
+        authenFilter.setName("AuthenFilter");
+        context.addFilter(authenFilter, "/*", null);
 
         ContextHandler resourceHandler = new ContextHandler("/static");
         String resource = "./public";
