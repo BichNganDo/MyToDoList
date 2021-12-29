@@ -1,0 +1,15 @@
+2021-12-29 11:04:52 DEBUG cache:83 - Could not find template in cache, creating new one; id=["templates/register.html"["en_US",UTF-8,parsed] ]
+2021-12-29 11:04:52 DEBUG cache:83 - Compiling FreeMarker template "templates/register.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/register.html"
+2021-12-29 11:04:58 DEBUG cache:83 - "templates/register.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/register.html didn't change.
+2021-12-29 11:07:02 DEBUG cache:83 - Could not find template in cache, creating new one; id=["templates/register.html"["en_US",UTF-8,parsed] ]
+2021-12-29 11:07:02 DEBUG cache:83 - Compiling FreeMarker template "templates/register.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/register.html"
+2021-12-29 11:07:02 DEBUG cache:83 - "templates/register.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-29 11:10:45 DEBUG cache:83 - Could not find template in cache, creating new one; id=["templates/register.html"["en_US",UTF-8,parsed] ]
+2021-12-29 11:10:45 DEBUG cache:83 - Compiling FreeMarker template "templates/register.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/register.html"
+2021-12-29 11:10:45 DEBUG cache:83 - "templates/register.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-29 11:12:17 DEBUG cache:83 - Could not find template in cache, creating new one; id=["templates/register.html"["en_US",UTF-8,parsed] ]
+2021-12-29 11:12:17 DEBUG cache:83 - Compiling FreeMarker template "templates/register.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/register.html"
+2021-12-29 11:12:17 DEBUG cache:83 - "templates/register.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-29 11:14:13 DEBUG cache:83 - Could not find template in cache, creating new one; id=["templates/register.html"["en_US",UTF-8,parsed] ]
+2021-12-29 11:14:13 DEBUG cache:83 - Compiling FreeMarker template "templates/register.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/register.html"
+2021-12-29 11:14:15 DEBUG cache:83 - "templates/register.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
