@@ -46,6 +46,7 @@ public class ToDoListModel {
                 toDoList.setId(rs.getInt("id"));
                 toDoList.setIdUser(rs.getInt("id_user"));
                 toDoList.setToDoList(rs.getString("to_do"));
+                toDoList.setChecked(rs.getBoolean("checked"));
 
                 resultToDoList.add(toDoList);
             }
@@ -78,6 +79,7 @@ public class ToDoListModel {
                 result.setId(rs.getInt("id"));
                 result.setIdUser(rs.getInt("id_user"));
                 result.setToDoList(rs.getString("to_do"));
+                result.setChecked(rs.getBoolean("checked"));
             }
 
             return result;
@@ -109,6 +111,39 @@ public class ToDoListModel {
             dbClient.releaseDbConnection(conn);
         }
 
+        return ErrorCode.FAIL.getValue();
+    }
+
+    public int editToDoList(int id, String toDoList, boolean checked) {
+        Connection conn = null;
+        try {
+            conn = dbClient.getDbConnection();
+            if (null == conn) {
+                return ErrorCode.CONNECTION_FAIL.getValue();
+            }
+
+            PreparedStatement editStmt = conn.prepareStatement("UPDATE `" + NAMETABLE + "` "
+                    + "SET to_do = ?, checked = ? "
+                    + "WHERE id = ? ");
+            editStmt.setString(1, toDoList);
+            int check;
+            if (checked == true) {
+                check = 1;
+                editStmt.setInt(2, check);
+            } else {
+                check = 0;
+                editStmt.setInt(2, check);
+            }
+            editStmt.setInt(3, id);
+
+            int rs = editStmt.executeUpdate();
+
+            return rs;
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+        } finally {
+            dbClient.releaseDbConnection(conn);
+        }
         return ErrorCode.FAIL.getValue();
     }
 

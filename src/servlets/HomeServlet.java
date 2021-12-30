@@ -69,6 +69,20 @@ public class HomeServlet extends HttpServlet {
                 break;
             }
 
+            case "toggle": {
+                String body = HttpHelper.getBodyData(request);
+                JSONObject jbody = new JSONObject(body);
+
+                int id = NumberUtils.toInt(jbody.optString("id"));
+                ToDoList toDoListByID = ToDoListModel.INSTANCE.getToDoListByID(id);
+
+                boolean checked = toDoListByID.isChecked();
+                int check = checked ? 1 : 0;
+                result.setData(check);
+                ToDoListModel.INSTANCE.editToDoList(id, toDoListByID.getToDoList(), !checked);
+                break;
+            }
+
             case "delete": {
                 String body = HttpHelper.getBodyData(request);
                 JSONObject jbody = new JSONObject(body);

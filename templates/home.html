@@ -100,10 +100,10 @@ ul li.checked::before {
                     <div>
                         <ul id="list_todo">
                           <#list all_to_do_list as toDoList>
-                              <li>${toDoList.toDoList}
-                                <i class="nav-icon fas fa-times position-absolute top-1 end-0" onclick="deleteList(`${toDoList.id}`)" style="margin-right: 10px;"></i> 
-                              </li>
-                              
+                          <li class="<#if toDoList.checked == true>checked</#if>" onclick="toggleCheckToDoItem(`${toDoList.id}`)" id="${toDoList.id}">
+                            ${toDoList.toDoList}
+                            <i class="nav-icon fas fa-times position-absolute top-1 end-0" onclick="deleteList(`${toDoList.id}`)" style="margin-right: 10px;"></i> 
+                          </li>
                           </#list>
                             
                             
@@ -120,7 +120,7 @@ ul li.checked::before {
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script>
       function deleteList(id) {
-        console.log("d " + id);
+        // console.log("d " + id);
           $.ajax({
               url: "${app_domain}/?action=delete",
               type: "POST",
@@ -144,12 +144,52 @@ ul li.checked::before {
         
       }
 
-      var list = document.querySelector('ul#list_todo');
-      list.addEventListener('click', function(ev) {
-        if (ev.target.tagName === 'LI') {
-          ev.target.classList.toggle('checked');
-        }
-      }, false);
+      // var list = document.querySelector('ul#list_todo');
+      // list.addEventListener('click', function(ev) {
+      //   if (ev.target.tagName === 'LI') {
+      //     ev.target.classList.toggle('checked');
+      //     // var id = $("#list_todo li").attr("id");
+      //         // console.log(id);
+      //     console.log(ev.target)
+      //   } else {
+      //     console.log("dsds")
+      //   }
+      // }, false);
+
+      function toggleCheckToDoItem(id){
+        console.log("id: " + id);
+        var item = document.getElementById(id);
+        // item.classList.toggle("checked")
+
+        $.ajax({
+              url: "${app_domain}/?action=toggle",
+              type: "POST",
+              dataType: "json",
+              contentType: 'application/json',
+              data: JSON.stringify({
+                  id: id
+              }),
+              success(response) {
+                console.log(response);
+                  if (response.errorCode >= 0) {
+                    if(response.data == 1){
+                      item.classList.remove("checked");
+                    }else if(response.data == 0){
+                      
+                      item.classList.add("checked");
+                    }
+                    console.log("success");
+                    // window.location.href="${app_domain}/";
+                      
+                  } else {
+                      console.log("fail");
+                  }
+
+              }
+          })
+        
+      }
+      
     </script>
 </body>
 </html>

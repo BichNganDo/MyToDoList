@@ -5,6 +5,7 @@ public class ToDoList {
     private int id;
     private int idUser;
     private String toDoList;
+    private boolean checked;
 
     public ToDoList() {
     }
@@ -31,6 +32,14 @@ public class ToDoList {
 
     public void setToDoList(String toDoList) {
         this.toDoList = toDoList;
+    }
+
+    public boolean isChecked() {
+        return checked;
+    }
+
+    public void setChecked(boolean checked) {
+        this.checked = checked;
     }
 
 }
