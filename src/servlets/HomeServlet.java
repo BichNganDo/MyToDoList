@@ -76,7 +76,7 @@ public class HomeServlet extends HttpServlet {
                 int id = NumberUtils.toInt(jbody.optString("id"));
                 int deleteToDoList = ToDoListModel.INSTANCE.deleteToDoList(id);
                 if (deleteToDoList >= 0) {
-                    response.sendRedirect(Config.APP_DOMAIN + "/");
+                    result.setErrorCode(0);
                 } else {
                     result.setErrorCode(-2);
                     result.setMessage("Xóa thất bại!");

@@ -927,3 +927,68 @@ freemarker.core.InvalidReferenceException: [... Exception message was already pr
 2021-12-29 19:50:15 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/home.html didn't change.
 2021-12-29 19:50:16 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
 2021-12-29 19:50:16 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:02:51 DEBUG cache:83 - Could not find template in cache, creating new one; id=["templates/login.html"["en_US",UTF-8,parsed] ]
+2021-12-30 20:02:51 DEBUG cache:83 - Compiling FreeMarker template "templates/login.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/login.html"
+2021-12-30 20:02:52 DEBUG cache:83 - "templates/login.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:02:56 DEBUG cache:83 - Could not find template in cache, creating new one; id=["templates/register.html"["en_US",UTF-8,parsed] ]
+2021-12-30 20:02:56 DEBUG cache:83 - Compiling FreeMarker template "templates/register.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/register.html"
+2021-12-30 20:02:56 DEBUG cache:83 - "templates/register.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:02:56 DEBUG cache:83 - "templates/login.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/login.html didn't change.
+2021-12-30 20:04:15 DEBUG cache:83 - "templates/register.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/register.html didn't change.
+2021-12-30 20:04:15 DEBUG cache:83 - "templates/register.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:04:16 DEBUG cache:83 - "templates/login.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/login.html didn't change.
+2021-12-30 20:04:26 ERROR RegisterUserServlet:114 - avatar
+2021-12-30 20:04:26 DEBUG cache:83 - "templates/login.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/login.html didn't change.
+2021-12-30 20:06:19 DEBUG cache:83 - "templates/login.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/login.html didn't change.
+2021-12-30 20:06:20 DEBUG cache:83 - "templates/login.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:08:21 DEBUG cache:83 - "templates/register.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/register.html didn't change.
+2021-12-30 20:08:22 DEBUG cache:83 - "templates/register.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:08:22 DEBUG cache:83 - "templates/login.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/login.html didn't change.
+2021-12-30 20:09:49 ERROR RegisterUserServlet:114 - avatar
+2021-12-30 20:11:03 ERROR RegisterUserServlet:114 - avatar
+2021-12-30 20:11:04 DEBUG cache:83 - Could not find template in cache, creating new one; id=["templates/login.html"["en_US",UTF-8,parsed] ]
+2021-12-30 20:11:04 DEBUG cache:83 - Compiling FreeMarker template "templates/login.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/login.html"
+2021-12-30 20:11:07 DEBUG cache:83 - "templates/login.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:11:08 DEBUG cache:83 - "templates/login.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:11:10 DEBUG cache:83 - Could not find template in cache, creating new one; id=["templates/register.html"["en_US",UTF-8,parsed] ]
+2021-12-30 20:11:10 DEBUG cache:83 - Compiling FreeMarker template "templates/register.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/register.html"
+2021-12-30 20:11:10 DEBUG cache:83 - "templates/register.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:11:10 DEBUG cache:83 - "templates/login.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/login.html didn't change.
+2021-12-30 20:16:05 DEBUG cache:83 - Could not find template in cache, creating new one; id=["templates/login.html"["en_US",UTF-8,parsed] ]
+2021-12-30 20:16:05 DEBUG cache:83 - Compiling FreeMarker template "templates/login.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/login.html"
+2021-12-30 20:16:06 DEBUG cache:83 - "templates/login.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:16:07 DEBUG cache:83 - Could not find template in cache, creating new one; id=["templates/register.html"["en_US",UTF-8,parsed] ]
+2021-12-30 20:16:07 DEBUG cache:83 - Compiling FreeMarker template "templates/register.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/register.html"
+2021-12-30 20:16:07 DEBUG cache:83 - "templates/register.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:16:07 DEBUG cache:83 - "templates/login.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:16:21 DEBUG cache:83 - "templates/login.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/login.html didn't change.
+2021-12-30 20:16:21 DEBUG cache:83 - "templates/login.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:16:43 DEBUG cache:83 - Could not find template in cache, creating new one; id=["templates/home.html"["en_US",UTF-8,parsed] ]
+2021-12-30 20:16:43 DEBUG cache:83 - Compiling FreeMarker template "templates/home.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/home.html"
+2021-12-30 20:16:44 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:16:51 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/home.html didn't change.
+2021-12-30 20:16:52 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:16:54 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:16:55 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:16:57 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/home.html didn't change.
+2021-12-30 20:16:57 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:16:58 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:16:59 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:16:59 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:27:22 DEBUG cache:83 - Updating source, info for cause: lastModifiedNotChanged=false, cache lastModified=1640782183574 != file lastModified=1640870808233
+2021-12-30 20:27:22 DEBUG cache:83 - Compiling FreeMarker template "templates/home.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/home.html"
+2021-12-30 20:27:23 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:27:24 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:29:18 DEBUG cache:83 - Could not find template in cache, creating new one; id=["templates/home.html"["en_US",UTF-8,parsed] ]
+2021-12-30 20:29:18 DEBUG cache:83 - Compiling FreeMarker template "templates/home.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/home.html"
+2021-12-30 20:29:19 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:29:23 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:29:23 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/home.html didn't change.
+2021-12-30 20:29:26 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:29:26 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:29:28 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:29:29 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/home.html didn't change.
+2021-12-30 20:29:32 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:29:32 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:29:33 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-30 20:29:33 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.

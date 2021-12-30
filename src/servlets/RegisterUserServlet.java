@@ -90,10 +90,16 @@ public class RegisterUserServlet extends HttpServlet {
                     } else {
                         // Process form file field (input type="file").
                         String filename = FilenameUtils.getName(item.getName());
-                        InputStream a = item.getInputStream();
-                        Path uploadDir = Paths.get("avatar/" + filename);
-                        Files.copy(a, uploadDir, StandardCopyOption.REPLACE_EXISTING);
-                        user.setAvatar("avatar/" + filename);
+                        if (StringUtils.isNotEmpty(filename)) {
+                            InputStream a = item.getInputStream();
+                            Path uploadDir = Paths.get("avatar/" + filename);
+                            Files.copy(a, uploadDir, StandardCopyOption.REPLACE_EXISTING);
+                            user.setAvatar("avatar/" + filename);
+                        } else {
+                            user.setAvatar("avatar/unnamed.png");
+                        }
+
+
                     }
                 }
                 int addUserRegister = UserModel.INSTANCE.addUser(user.getName(),
