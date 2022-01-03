@@ -1954,3 +1954,358 @@ freemarker.core._MiscTemplateException: [... Exception message was already print
 2021-12-30 23:32:52 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
 2021-12-30 23:32:52 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
 2021-12-30 23:32:53 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-31 16:33:55 DEBUG cache:83 - Could not find template in cache, creating new one; id=["templates/home.html"["en_US",UTF-8,parsed] ]
+2021-12-31 16:33:55 DEBUG cache:83 - Compiling FreeMarker template "templates/home.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/home.html"
+2021-12-31 16:33:55 ERROR runtime:98 - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> avatar  [in template "templates/home.html" at line 72, column 59]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction (FTL stack trace):
+----------
+==> ${avatar}  [in template "templates/home.html" at line 72, column 57]
+----------
+
+Java stack trace (for programmers):
+----------
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:382)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at templater.PageGenerator.getPage(PageGenerator.java:33)
+	at servlets.HomeServlet.doGet(HomeServlet.java:45)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:781)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1667)
+	at filter.AuthenFilter.doFilter(AuthenFilter.java:59)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:583)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1126)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1060)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:498)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:265)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:243)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:610)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:539)
+	at java.lang.Thread.run(Thread.java:748)
+2021-12-31 16:33:55 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-31 16:33:55 ERROR runtime:98 - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> avatar  [in template "templates/home.html" at line 72, column 59]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction (FTL stack trace):
+----------
+==> ${avatar}  [in template "templates/home.html" at line 72, column 57]
+----------
+
+Java stack trace (for programmers):
+----------
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:382)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at templater.PageGenerator.getPage(PageGenerator.java:33)
+	at servlets.HomeServlet.doGet(HomeServlet.java:45)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:781)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1667)
+	at filter.AuthenFilter.doFilter(AuthenFilter.java:59)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:583)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1126)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1060)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:498)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:265)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:243)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:610)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:539)
+	at java.lang.Thread.run(Thread.java:748)
+2021-12-31 16:33:56 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-31 16:33:56 ERROR runtime:98 - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> avatar  [in template "templates/home.html" at line 72, column 59]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction (FTL stack trace):
+----------
+==> ${avatar}  [in template "templates/home.html" at line 72, column 57]
+----------
+
+Java stack trace (for programmers):
+----------
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:382)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at templater.PageGenerator.getPage(PageGenerator.java:33)
+	at servlets.HomeServlet.doGet(HomeServlet.java:45)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:781)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1667)
+	at filter.AuthenFilter.doFilter(AuthenFilter.java:59)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:583)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1126)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1060)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:498)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:265)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:243)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:610)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:539)
+	at java.lang.Thread.run(Thread.java:748)
+2021-12-31 16:34:17 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/home.html didn't change.
+2021-12-31 16:34:17 ERROR runtime:98 - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> avatar  [in template "templates/home.html" at line 72, column 59]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction (FTL stack trace):
+----------
+==> ${avatar}  [in template "templates/home.html" at line 72, column 57]
+----------
+
+Java stack trace (for programmers):
+----------
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:382)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at templater.PageGenerator.getPage(PageGenerator.java:33)
+	at servlets.HomeServlet.doGet(HomeServlet.java:45)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:781)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1667)
+	at filter.AuthenFilter.doFilter(AuthenFilter.java:59)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:583)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1126)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1060)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:498)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:265)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:243)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:610)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:539)
+	at java.lang.Thread.run(Thread.java:748)
+2021-12-31 16:34:17 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-31 16:34:17 ERROR runtime:98 - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> avatar  [in template "templates/home.html" at line 72, column 59]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction (FTL stack trace):
+----------
+==> ${avatar}  [in template "templates/home.html" at line 72, column 57]
+----------
+
+Java stack trace (for programmers):
+----------
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:382)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at templater.PageGenerator.getPage(PageGenerator.java:33)
+	at servlets.HomeServlet.doGet(HomeServlet.java:45)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:781)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1667)
+	at filter.AuthenFilter.doFilter(AuthenFilter.java:59)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:583)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1126)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1060)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:498)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:265)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:243)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:610)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:539)
+	at java.lang.Thread.run(Thread.java:748)
+2021-12-31 16:34:18 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-31 16:34:18 ERROR runtime:98 - Error executing FreeMarker template
+FreeMarker template error:
+The following has evaluated to null or missing:
+==> avatar  [in template "templates/home.html" at line 72, column 59]
+
+Tip: If the failing expression is known to be legally null/missing, either specify a default value with myOptionalVar!myDefault, or use <#if myOptionalVar??>when-present<#else>when-missing</#if>. (These only cover the last step of the expression; to cover the whole expression, use parenthessis: (myOptionVar.foo)!myDefault, (myOptionVar.foo)??
+
+The failing instruction (FTL stack trace):
+----------
+==> ${avatar}  [in template "templates/home.html" at line 72, column 57]
+----------
+
+Java stack trace (for programmers):
+----------
+freemarker.core.InvalidReferenceException: [... Exception message was already printed; see it above ...]
+	at freemarker.core.InvalidReferenceException.getInstance(InvalidReferenceException.java:98)
+	at freemarker.core.EvalUtil.coerceModelToString(EvalUtil.java:382)
+	at freemarker.core.Expression.evalAndCoerceToString(Expression.java:115)
+	at freemarker.core.DollarVariable.accept(DollarVariable.java:76)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.MixedContent.accept(MixedContent.java:93)
+	at freemarker.core.Environment.visit(Environment.java:265)
+	at freemarker.core.Environment.process(Environment.java:243)
+	at freemarker.template.Template.process(Template.java:277)
+	at templater.PageGenerator.getPage(PageGenerator.java:33)
+	at servlets.HomeServlet.doGet(HomeServlet.java:45)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:781)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1667)
+	at filter.AuthenFilter.doFilter(AuthenFilter.java:59)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1650)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:583)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1126)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:515)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1060)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerList.handle(HandlerList.java:52)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:97)
+	at org.eclipse.jetty.server.Server.handle(Server.java:498)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:265)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:243)
+	at org.eclipse.jetty.io.AbstractConnection$2.run(AbstractConnection.java:540)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:610)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:539)
+	at java.lang.Thread.run(Thread.java:748)
+2021-12-31 16:35:55 DEBUG cache:83 - Could not find template in cache, creating new one; id=["templates/home.html"["en_US",UTF-8,parsed] ]
+2021-12-31 16:35:55 DEBUG cache:83 - Compiling FreeMarker template "templates/home.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/home.html"
+2021-12-31 16:35:55 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-31 16:36:02 ERROR ToDoListModel:109 - Field 'checked' doesn't have a default value
+2021-12-31 16:36:02 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/home.html didn't change.
+2021-12-31 16:40:10 DEBUG cache:83 - Could not find template in cache, creating new one; id=["templates/home.html"["en_US",UTF-8,parsed] ]
+2021-12-31 16:40:10 DEBUG cache:83 - Compiling FreeMarker template "templates/home.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/home.html"
+2021-12-31 16:40:14 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-31 16:40:21 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/home.html didn't change.
+2021-12-31 16:40:21 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-31 16:40:25 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-31 16:40:25 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-31 16:40:31 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/home.html didn't change.
+2021-12-31 16:40:31 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2021-12-31 16:40:39 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/home.html didn't change.
+2021-12-31 16:40:40 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2022-01-03 09:41:36 DEBUG cache:83 - Could not find template in cache, creating new one; id=["templates/login.html"["en_US",UTF-8,parsed] ]
+2022-01-03 09:41:36 DEBUG cache:83 - Compiling FreeMarker template "templates/login.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/login.html"
+2022-01-03 09:41:37 DEBUG cache:83 - "templates/login.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2022-01-03 09:41:41 DEBUG cache:83 - Could not find template in cache, creating new one; id=["templates/register.html"["en_US",UTF-8,parsed] ]
+2022-01-03 09:41:41 DEBUG cache:83 - Compiling FreeMarker template "templates/register.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/register.html"
+2022-01-03 09:41:41 DEBUG cache:83 - "templates/register.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2022-01-03 09:41:41 DEBUG cache:83 - "templates/login.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/login.html didn't change.
+2022-01-03 09:42:53 DEBUG cache:83 - "templates/login.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/login.html didn't change.
+2022-01-03 09:42:54 DEBUG cache:83 - "templates/login.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2022-01-03 09:43:06 DEBUG cache:83 - Could not find template in cache, creating new one; id=["templates/home.html"["en_US",UTF-8,parsed] ]
+2022-01-03 09:43:06 DEBUG cache:83 - Compiling FreeMarker template "templates/home.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/home.html"
+2022-01-03 09:43:06 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2022-01-03 09:43:30 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/home.html didn't change.
+2022-01-03 09:43:30 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2022-01-03 09:43:49 DEBUG cache:83 - Could not find template in cache, creating new one; id=["templates/home.html"["en_US",UTF-8,parsed] ]
+2022-01-03 09:43:49 DEBUG cache:83 - Compiling FreeMarker template "templates/home.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/home.html"
+2022-01-03 09:43:50 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2022-01-03 09:44:23 DEBUG cache:83 - Could not find template in cache, creating new one; id=["templates/home.html"["en_US",UTF-8,parsed] ]
+2022-01-03 09:44:23 DEBUG cache:83 - Compiling FreeMarker template "templates/home.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/home.html"
+2022-01-03 09:44:23 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2022-01-03 09:44:30 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/home.html didn't change.
+2022-01-03 09:44:31 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2022-01-03 09:44:33 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2022-01-03 09:44:33 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2022-01-03 09:44:36 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/home.html didn't change.
+2022-01-03 09:44:36 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2022-01-03 09:44:39 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2022-01-03 09:44:40 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2022-01-03 09:44:47 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/home.html didn't change.
+2022-01-03 09:44:48 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2022-01-03 09:44:51 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2022-01-03 09:44:51 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2022-01-03 09:48:37 DEBUG cache:83 - Could not find template in cache, creating new one; id=["templates/login.html"["en_US",UTF-8,parsed] ]
+2022-01-03 09:48:37 DEBUG cache:83 - Compiling FreeMarker template "templates/login.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/login.html"
+2022-01-03 09:48:38 DEBUG cache:83 - "templates/login.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2022-01-03 09:48:45 DEBUG cache:83 - Could not find template in cache, creating new one; id=["templates/home.html"["en_US",UTF-8,parsed] ]
+2022-01-03 09:48:45 DEBUG cache:83 - Compiling FreeMarker template "templates/home.html"["en_US",UTF-8,parsed]  from "/home/ngan/Code/ToDoList/templates/home.html"
+2022-01-03 09:48:45 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2022-01-03 09:48:53 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/home.html didn't change.
+2022-01-03 09:48:53 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2022-01-03 09:48:58 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.
+2022-01-03 09:48:58 DEBUG cache:83 - "templates/home.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/home.html didn't change.
+2022-01-03 09:49:12 DEBUG cache:83 - "templates/login.html"["en_US",UTF-8,parsed]  using cached since /home/ngan/Code/ToDoList/templates/login.html didn't change.
+2022-01-03 09:49:13 DEBUG cache:83 - "templates/login.html"["en_US",UTF-8,parsed]  cached copy not yet stale; using cached.

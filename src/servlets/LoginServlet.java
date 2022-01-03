@@ -14,7 +14,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.JWTModel;
+import model.SHAModel;
 import model.UserModel;
 import templater.PageGenerator;
 
@@ -42,8 +42,8 @@ public class LoginServlet extends HttpServlet {
         String password = SecurityHelper.getMD5Hash(request.getParameter("password"));
         User checkLogin = UserModel.INSTANCE.checkLogin(email, password);
         if (checkLogin != null && checkLogin.getId() > 0) {
-            String jwtToken = JWTModel.INSTANCE.genJWT(checkLogin.getEmail(), checkLogin.getId());
-            HttpHelper.setCookie(response, "authen", jwtToken, 86400);
+            String genAccessToken = SHAModel.INSTANCE.genAccessToken(checkLogin.getEmail(), checkLogin.getId());
+            HttpHelper.setCookie(response, "authen", genAccessToken, 86400);
             SessionHelper.INSTANCE.clearSession(request, "error_message");
             response.sendRedirect(Config.APP_DOMAIN + "/");
         } else {

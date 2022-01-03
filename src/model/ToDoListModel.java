@@ -99,10 +99,11 @@ public class ToDoListModel {
                 return ErrorCode.CONNECTION_FAIL.getValue();
             }
 
-            PreparedStatement addStmt = conn.prepareStatement("INSERT INTO `" + NAMETABLE + "` (id_user, to_do) "
-                    + "VALUES (?, ?)");
+            PreparedStatement addStmt = conn.prepareStatement("INSERT INTO `" + NAMETABLE + "` (id_user, to_do, checked) "
+                    + "VALUES (?, ?, 0)");
             addStmt.setInt(1, idUser);
             addStmt.setString(2, toDoList);
+
             int rs = addStmt.executeUpdate();
             return rs;
         } catch (Exception e) {

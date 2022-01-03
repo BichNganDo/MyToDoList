@@ -7,7 +7,6 @@ import entity.ToDoList;
 import entity.User;
 import helper.HttpHelper;
 import helper.ServletUtil;
-import helper.SessionHelper;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
@@ -16,7 +15,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.JWTModel;
+import model.SHAModel;
 import model.ToDoListModel;
 import model.UserModel;
 import org.apache.commons.lang3.math.NumberUtils;
@@ -31,7 +30,7 @@ public class HomeServlet extends HttpServlet {
         pageVariables.put("app_domain", Config.APP_DOMAIN);
         pageVariables.put("static_domain", Config.STATIC_DOMAIN);
 
-        int idUser = JWTModel.INSTANCE.getIdUser(request);
+        int idUser = SHAModel.INSTANCE.getIdUser(request);
         List<ToDoList> sliceToDoList = ToDoListModel.INSTANCE.getSliceToDoList(idUser);
         pageVariables.put("all_to_do_list", sliceToDoList);
 
@@ -55,7 +54,7 @@ public class HomeServlet extends HttpServlet {
         switch (action) {
             case "add": {
                 String toDoList = request.getParameter("toDoList");
-                int idUser = JWTModel.INSTANCE.getIdUser(request);
+                int idUser = SHAModel.INSTANCE.getIdUser(request);
 
                 int addToDoList = ToDoListModel.INSTANCE.addToDoList(idUser, toDoList);
 

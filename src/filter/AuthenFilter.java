@@ -2,10 +2,7 @@ package filter;
 
 
 import common.Config;
-import freemarker.template.Configuration;
 import helper.HttpHelper;
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jws;
 import java.io.IOException;
 import java.util.ArrayList;
 import javax.servlet.Filter;
@@ -16,10 +13,11 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.JWTModel;
+import model.SHAModel;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
+import org.json.JSONObject;
 
 public class AuthenFilter implements Filter {
     final static Logger logger = Logger.getLogger(AuthenFilter.class);
@@ -51,9 +49,10 @@ public class AuthenFilter implements Filter {
             } else {
                 String authenCookie = HttpHelper.getCookie(req, "authen");
                 if (StringUtils.isNotEmpty(authenCookie)) {
-                    Jws<Claims> user = JWTModel.INSTANCE.parseJwt(authenCookie);
-                    if (user != null) {
-                        Object idObject = user.getBody().get("id");
+                    JSONObject vertifyAccessToken = SHAModel.INSTANCE.vertifyAccessToken(authenCookie);
+//                    Jws<Claims> user = JWTModel.INSTANCE.parseJwt(authenCookie);
+                    if (vertifyAccessToken != null) {
+                        Object idObject = vertifyAccessToken.get("id");
                         int idUser = Integer.parseInt(idObject.toString());
                         if (idUser > 0) {
                             fc.doFilter(request, response);
