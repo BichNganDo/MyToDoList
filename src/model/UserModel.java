@@ -40,7 +40,41 @@ public class UserModel {
                 result.setName(rs.getString("name"));
                 result.setEmail(rs.getString("email"));
                 result.setPassword(rs.getString("password"));
+                result.setSalt(rs.getString("salt"));
                 result.setAvatar(rs.getString("avatar"));
+            }
+
+            return result;
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+        } finally {
+            dbClient.releaseDbConnection(conn);
+        }
+        return result;
+    }
+
+    public User getUserByEmail(String email) {
+
+        User result = new User();
+        Connection conn = null;
+        try {
+            conn = dbClient.getDbConnection();
+            if (null == conn) {
+                return result;
+            }
+            PreparedStatement getUserRegisterByIdStmt = conn.prepareStatement("SELECT * FROM `" + NAMETABLE + "` WHERE email = ? ");
+            getUserRegisterByIdStmt.setString(1, email);
+
+            ResultSet rs = getUserRegisterByIdStmt.executeQuery();
+
+            if (rs.next()) {
+                result.setId(rs.getInt("id"));
+                result.setName(rs.getString("name"));
+                result.setEmail(rs.getString("email"));
+                result.setPassword(rs.getString("password"));
+                result.setSalt(rs.getString("salt"));
+                result.setAvatar(rs.getString("avatar"));
+
             }
 
             return result;
@@ -84,19 +118,21 @@ public class UserModel {
         if (isExistEmail == true) {
             return ErrorCode.EXIST_ACCOUNT.getValue();
         }
-        password = SecurityHelper.getMD5Hash(password);
+        String salt = SecurityHelper.genRandomSalt();
+        password = SecurityHelper.getMD5Hash(password + salt);
         try {
             conn = dbClient.getDbConnection();
             if (null == conn) {
                 return ErrorCode.CONNECTION_FAIL.getValue();
             }
 
-            PreparedStatement addStmt = conn.prepareStatement("INSERT INTO `" + NAMETABLE + "` (name, email, password, avatar) "
-                    + "VALUES (?, ?, ?, ?)");
+            PreparedStatement addStmt = conn.prepareStatement("INSERT INTO `" + NAMETABLE + "` (name, email, password, salt, avatar) "
+                    + "VALUES (?, ?, ?, ?, ?)");
             addStmt.setString(1, name);
             addStmt.setString(2, email);
             addStmt.setString(3, password);
-            addStmt.setString(4, avatar);
+            addStmt.setString(4, salt);
+            addStmt.setString(5, avatar);
             int rs = addStmt.executeUpdate();
             return rs;
         } catch (Exception e) {

@@ -39,7 +39,8 @@ public class LoginServlet extends HttpServlet {
         APIResult result = new APIResult(0, "Success");
 
         String email = request.getParameter("email");
-        String password = SecurityHelper.getMD5Hash(request.getParameter("password"));
+        User userByEmail = UserModel.INSTANCE.getUserByEmail(email);
+        String password = SecurityHelper.getMD5Hash(request.getParameter("password") + userByEmail.getSalt());
         User checkLogin = UserModel.INSTANCE.checkLogin(email, password);
         if (checkLogin != null && checkLogin.getId() > 0) {
             String genAccessToken = SHAModel.INSTANCE.genAccessToken(checkLogin.getEmail(), checkLogin.getId());
